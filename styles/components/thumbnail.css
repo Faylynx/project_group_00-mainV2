@@ -1,0 +1,162 @@
+
+
+
+.thumbnail_border {
+    border:.4rem solid hsl(var(--base-hue-1), 20%, 20%);
+}
+
+.thumbnail_br {
+    border-radius: 0.5rem; 
+}
+
+.overlay_box{
+    position: relative;
+    height: 5rem;
+    background-color: hsl(var(--base-hue-1), 20%, 20%);
+    color: hsl(var(--base-hue-1),5%, 80%);
+
+   
+    display: block;
+    
+    opacity: 0.9; 
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.overlay_name {
+    position: absolute;
+    left: 3%;
+    font-size: 1.5rem;
+}
+
+.overlay_email{
+    position: absolute;
+    bottom: 10%;
+    right: 3%;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 768px){
+    .overlay_box {
+        display: none;
+       
+        opacity: 0; 
+       
+    }  
+}
+
+.test_overlay:hover .overlay_box {
+    display: block;
+    opacity: 0.9;
+
+    position: absolute;
+    top: 76%;
+    left: -2%;
+    width: 103%;
+    height: 25%;
+}
+
+.test_overlay:hover {
+    transform: scale(1.08);
+    overflow: hidden;
+
+
+
+
+
+
+    
+}
+.test_overlay:hover::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        box-shadow: .3rem .3rem 0.5rem 0.5rem;
+        background: linear-gradient(
+        120deg, hsl(var(--base-hue-5), 60%, 190%),
+        hsl(var(--base-hue-3), 180%, 80%),
+        hsl(var(--base-hue-3), 180%, 60%));
+        mix-blend-mode: multiply;
+}
+
+
+
+
+
+
+ /*  
+@media screen and (min-width: 768px) {
+
+    .col-12 .overlay{
+        display: none;
+    }
+
+    .col-12:hover .overlay{
+        position: absolute;
+        top: 78%;
+        left: -3%;
+        width: 107%;
+        opacity: 0.9;
+        height: 25%;
+        z-index: 1;
+    } 
+    
+
+
+    
+    .col-12 img{
+
+        transition: transform 0.3s ease;
+        
+        z-index: 1;   
+    }
+    
+    .col-12::before{
+        content: "";
+        position: absolute;
+        height: 107%;
+        width: 104%;
+        bottom: -4%;
+
+        box-shadow: 1.1rem 1.1rem .5rem .5rem;
+        background-size: cover;
+        background: linear-gradient(
+        120deg, hsl(var(--base-hue-5), 60%, 190%),
+        hsl(var(--base-hue-3), 180%, 80%),
+        hsl(var(--base-hue-3), 180%, 60%));
+        mix-blend-mode: multiply;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.3s ease;  
+        z-index: 1;  
+    }
+
+    .col-12:hover::before{
+        opacity: 0.6;
+        z-index: 1;
+    }
+    
+    .col-12:hover img{
+        transform: scale(1.08);
+        filter: blur(.1rem) contrast(150%); 
+    }  
+  
+    
+}
+
+
+@media screen and (min-width: 1366px) {
+    .col-12 img{
+    }
+    .name{
+        font-size: 1.2rem;
+    }
+    .email{
+        font-size: 1.2rem;
+    }
+}
+*/
